@@ -1,13 +1,11 @@
 from django import forms
-
-
+from phonenumber_field.formfields import PhoneNumberField
 from .models import User
 
 
-class LoginForm(forms.ModelForm):
-        class Meta:
-            model = User
-            fields = ['phone_no', 'password']
+class LoginForm(forms.Form):
+    phone_no = PhoneNumberField()
+    password = forms.CharField(widget=forms.PasswordInput)
 
 
 class UserRegistrationForm(forms.ModelForm):
