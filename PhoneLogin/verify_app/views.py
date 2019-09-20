@@ -16,7 +16,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request,user)
-                    return HttpResponse('Authenticated successfully')
+                    return render(request, 'verify_app/login_done.html')
                 else:
                     return HttpResponse('Disabled account')
             else:
