@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'verify_app',
-    'phone_field'
+    'phonenumber_field',
+
 ]
 AUTH_USER_MODEL = 'verify_app.User'
 MIDDLEWARE = [
